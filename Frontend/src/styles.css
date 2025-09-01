@@ -1,0 +1,51 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #fff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --danger: #dc2626;
+  --success: #16a34a;
+}
+
+body { margin:0; font-family: Inter, system-ui, Arial; background:var(--bg); color:#111; }
+.container { max-width:900px; margin:24px auto; padding:16px; }
+.header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+.header h1 { margin:0; font-size:20px; }
+.header nav a, .header .link-btn { margin-left:12px; text-decoration:none; color:var(--accent); }
+.link-btn { background:none; border: none; cursor:pointer; color:var(--accent); }
+.main { background:var(--card); padding:18px; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.auth { max-width:420px; margin: 0 auto; padding: 12px; }
+.auth form { display:flex; flex-direction:column; gap:8px; }
+.auth input { padding:10px; border:1px solid #ddd; border-radius:6px; }
+.auth button { padding:10px; background:var(--accent); color:#fff; border:none; border-radius:6px; cursor:pointer; }
+
+/* create form */
+.tasks .create-form { display:flex; gap:8px; margin-bottom:12px; }
+.tasks .create-form input { padding:8px; border:1px solid #ddd; border-radius:6px; flex:1; }
+.tasks .create-form .primary-btn { padding:8px 12px; border-radius:6px; background:var(--accent); color:#fff; border:none; cursor:pointer; }
+
+.task-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.task { display:flex; align-items:center; justify-content:space-between; padding:10px; border-radius:8px; background:#fff; border:1px solid #eee; }
+.task.completed .title { text-decoration:line-through; color:var(--muted); }
+.task .left { display:flex; gap:10px; align-items:center; }
+.task .title { font-weight:600; }
+.task .meta { font-size:12px; color:var(--muted); }
+
+/* action buttons */
+.task .actions button {
+  margin-left:8px;
+  padding:6px 12px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.task .actions .edit { background:#f3f4f6; }
+.task .actions .delete { background:var(--danger); color:#fff; border:none; }
+.task .actions .save { background:var(--success); color:#fff; border:none; }
+.task .actions .cancel { background:#9ca3af; color:#fff; border:none; }
+
+.task .actions button:hover { opacity:0.9; }
+
+.error { color: #b91c1c; margin-top:8px; }
